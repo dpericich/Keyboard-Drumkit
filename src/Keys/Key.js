@@ -1,23 +1,10 @@
 import React from 'react';
 
 const Key = ({letter, char, sound}) => {
-    let checkKeyDown = (event) => {
-        console.log(event.key)
-        if (event.key === char) {
-            alert(`You pressed ${char}`)
-        }
-    }
-
-    function handleKeyDown(event) {
-        if(event.keyCode === 65) {
-           console.log("the key was pressed") 
-        }
-    }
-
     return(
-        <div style={keyStyle} onKeyDown={handleKeyDown}>
+        <div style={keyStyle}>
             <div style={letterStyle}>
-                <audio className="drum" src={sound} />
+                <audio className="drum" src={sound} id={letter}/>
                 {letter}
             </div>
         </div>
@@ -29,7 +16,7 @@ const keyStyle = {
     borderRadius: '5px',
     width: '50px',
     height: '50px',
-    margin: '40px',
+    margin: '35px',
     display: 'flex',
     flexDireciton: 'column',
     alignItems: 'center',

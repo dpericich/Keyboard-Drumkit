@@ -1,8 +1,13 @@
 import React from 'react';
+import RecordDongle from './Keys/RecordDongle';
 
 const Recordings = () => {
     return(
-        <div>I show all the beats</div>
+        <div>
+            <div>I show all the beats</div>
+            <RecordDongle />
+        </div>
+
     )
 };
 

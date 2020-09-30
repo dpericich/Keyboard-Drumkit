@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Navbar from './Navbar';
-import Keypad from './Keypad';
+import Keypad from './Keys/Keypad';
 import Recordings from './Recordings';
 import Error from './Error';
 
