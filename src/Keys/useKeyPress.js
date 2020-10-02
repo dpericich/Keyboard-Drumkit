@@ -2,6 +2,20 @@ import { useState, useEffect } from 'react';
 
 const letters = ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l'];
 
+const addClass = (key, selector, classToAdd) => {
+  if (letters.includes(key)) {
+    let elem = document.querySelector(`.${key}.${selector}`)
+    elem.className += ` ${classToAdd}`;
+  }
+}
+
+const removeClass = (key, selector, classToRemove) => {
+  if (letters.includes(key)) {
+    let elem = document.querySelector(`.${key}.${selector}`)
+    elem.classList.remove(`${classToRemove}`)
+  }
+}
+
 const playSound = (key) => {
   if (letters.includes(key)) { 
     let audio = document.getElementById(key)
@@ -16,10 +30,15 @@ export  const useKeyPress = callback => {
       if (keyPressed !== key && key.length === 1) {
         setKeyPressed(key);
         callback && callback(key);
-        playSound(key);        
+        playSound(key); 
+        addClass(key, 'key-style', 'key-style-active');
+        addClass(key, 'letter-style', 'letter-style-active');      
       }
     };
-    const upHandler = (key) => {
+
+    const upHandler = ({key}) => {
+      removeClass(key, 'key-style', 'key-style-active');
+      removeClass(key, 'letter-style', 'letter-style-active');
       setKeyPressed(null);
     };
 

@@ -7,6 +7,11 @@ import Recordings from './Recordings';
 import Error from './Error';
 
 class App extends React.Component {
+  
+  state = {
+    track: {name: "", beats: []}
+  }
+
   render(){
     return(
       <Router>

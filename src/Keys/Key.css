@@ -1,0 +1,33 @@
+.key-style { 
+    border: 5px solid limegreen;
+    border-radius: 5px;
+    width: 50px;
+    height: 50px;
+    margin: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.key-style-active { 
+    border: 5px solid white;
+    border-radius: 5px;
+    width: 50px;
+    height: 50px;
+    margin: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s ease-out;
+    transform: scale(1.5);
+}
+
+.letter-style {
+    color: limegreen;
+}
+
+.letter-style-active {
+    color: white;
+}

@@ -2,7 +2,6 @@ import React from 'react';
 import Key from './Key';
 import {keyNotes} from './keyNotes';
 import {useKeyPress} from './useKeyPress';
-import RecordDongle from './RecordDongle';
 
 const Keypad = () => {
     useKeyPress(key => console.log(key))
@@ -22,9 +21,8 @@ const keypadStyle={
     display: 'flex',
     flexDirection: 'row',
     flexWrap: 'wrap',
-    alignItems: 'center',
+    alignItems: 'center', 
     justifyContent: 'center',
-
 }
 
 export default Keypad;
