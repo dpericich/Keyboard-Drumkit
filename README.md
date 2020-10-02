@@ -6,7 +6,7 @@ can do anything from tap a hi-hat to thump a bass drum just by pressing keys.
 The main screen of this app is the keypad itself, which contains the 9 middle character keys. To get started, simply press any key and 
 listen for the sound. Each key is mapped to a different drum sound. Sounds can be played at any speed or repetition, allowing for amazing beats.
 
-<img src="./recording.gif" alt="keyboard demo" />
+![](recording.gif)
 
 ## How it works
 The Applications main feature is key responsive sounds. There is a file with an array of objects that contains the letter, key number and sound for each key. This is passed through to a container that renders out each key. A file with functions was created to create key up and key down events to call the sounds and key transitions. I used hooks to store the state of the key pressed. As long as the key pressed is included inside an array of the 9 letters, it will call the corresponding sound and call the individual key to add an active class.
